@@ -28,7 +28,7 @@ export default function SplashScreen({ onComplete }: Props) {
         clearInterval(timer);
         setTimeout(() => {
           setVisible(false);
-          setTimeout(onComplete, 500);
+          setTimeout(onComplete, 620);
         }, 200);
       }
     }, interval);
@@ -52,8 +52,8 @@ export default function SplashScreen({ onComplete }: Props) {
             <Content>
               {/* Name */}
               <motion.div
-                initial={{ opacity: 0, letterSpacing: "0.5em", y: 20 }}
-                animate={{ opacity: 1, letterSpacing: "-0.02em", y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
               >
                 <Name>

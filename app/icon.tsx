@@ -16,6 +16,7 @@ export default function Icon() {
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
+          padding: "10%",
         }}
       >
         <span

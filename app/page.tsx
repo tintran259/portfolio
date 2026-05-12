@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { motion, AnimatePresence } from "framer-motion";
 import SplashScreen from "@/components/SplashScreen";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
@@ -22,18 +23,26 @@ export default function Home() {
     <>
       <SplashScreen onComplete={() => setSplashDone(true)} />
 
-      {splashDone && (
-        <main style={{ position: "relative" }}>
-          <TechBackground />
-          <Navigation />
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-          <ScrollToTop />
-        </main>
-      )}
+      <AnimatePresence>
+        {splashDone && (
+          <motion.main
+            key="main"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            style={{ position: "relative" }}
+          >
+            <TechBackground />
+            <Navigation />
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+            <ScrollToTop />
+          </motion.main>
+        )}
+      </AnimatePresence>
     </>
   );
 }

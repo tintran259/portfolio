@@ -19,12 +19,15 @@ export const CanvasWrapper = styled.div`
   @media (min-width: 640px) {
     width: 360px;
     height: 360px;
+    
   }
 
   @media (min-width: 1024px) {
     width: 400px;
     height: 400px;
   }
+
+  
 `;
 
 export const DragHint = styled.p`

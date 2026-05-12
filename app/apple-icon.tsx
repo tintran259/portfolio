@@ -16,6 +16,7 @@ export default function AppleIcon() {
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
+          padding: "10%",
         }}
       >
         <span

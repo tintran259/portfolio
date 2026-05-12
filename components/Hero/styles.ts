@@ -65,11 +65,18 @@ export const RightCol = styled.div`
 
   /* scale down on small screens so it fits comfortably */
   @media (max-width: 480px) {
+    width: 100%;
     transform: scale(0.72);
     margin: -2.2rem 0;
+    & > div > div> div> div>div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   @media (min-width: 481px) and (max-width: 1023px) {
+    width: 100%;
     transform: scale(0.85);
     margin: -1rem 0;
   }
